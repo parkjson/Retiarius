@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.clasprc.json
+# real emails contain personal data
+test/fixtures/*
+!test/fixtures/.gitkeep
+# your own filter rules and the tests that pin them down (see rules.example.js)
+src/Rules.js
+test/private/
+# links this folder to your Apps Script project (clasp create / clasp clone)
+.clasp.json

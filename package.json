@@ -1,0 +1,11 @@
+{
+  "name": "retiarius",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/",
+    "push": "clasp push",
+    "logs": "clasp logs",
+    "check": "node tools/check.js",
+    "replay": "node tools/replay.js"
+  }
+}
