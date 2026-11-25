@@ -4,8 +4,9 @@ node_modules/
 # real emails contain personal data
 test/fixtures/*
 !test/fixtures/.gitkeep
-# your own filter rules and the tests that pin them down (see rules.example.js)
+# your own filter rules (see rules.example.js). Keep them in src/Rules.js, or
+# in private/ as a separate private git repo (npm run push copies them over)
 src/Rules.js
-test/private/
+private/
 # links this folder to your Apps Script project (clasp create / clasp clone)
 .clasp.json

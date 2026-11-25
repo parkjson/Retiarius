@@ -2,8 +2,8 @@
   "name": "retiarius",
   "private": true,
   "scripts": {
-    "test": "node --test test/",
-    "push": "clasp push",
+    "test": "node --test test/ $(test -d private/tests && echo private/tests/)",
+    "push": "node tools/sync-rules.js && clasp push",
     "logs": "clasp logs",
     "check": "node tools/check.js",
     "replay": "node tools/replay.js"

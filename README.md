@@ -39,6 +39,12 @@ Every listing is logged (search, rule, matched text, title, price, link) to a
    `git checkout src/appsscript.json`, because it enables the Gmail advanced service.
 3. Make your rules: `cp rules.example.js src/Rules.js` and edit them. The
    file is gitignored and only goes to Apps Script.
+
+   To keep your rules in version control without publishing them, put them
+   in a private repo cloned into `private/` (gitignored) as
+   `private/Rules.js`, with any tests in `private/tests/`. `npm run push`
+   copies them to `src/Rules.js` before deploying, and `npm test` runs
+   `private/tests/` too.
 4. Deploy with `npm run push`. In the Apps Script editor, run `run` once to
    grant access, then `installTrigger`. `removeTrigger` stops it.
 
